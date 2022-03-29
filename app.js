@@ -3,7 +3,7 @@ const app=express();
 const path=require('path');
 const port = 3030;
 app.use(express.static('./public'));
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Está corriendo el servidor en el puerto: ${port}`)
 })
 app.get('/', (req, res) => {
